@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0b0b16;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #111122;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            color: #a855f7;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #a855f7;
+        }
+
+        section {
+            padding: 80px 8%;
+            min-height: 60vh;
+        }
+
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            min-height: 85vh;
+        }
+
+        .home h1 {
+            font-size: 45px;
+            margin: 15px 0;
+        }
+
+        .home h1 span {
+            color: #a855f7;
+        }
+
+        .home p {
+            color: #ccc;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #a855f7;
+            color: white;
+            padding: 12px 25px;
+            margin-top: 25px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        .profile {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid #a855f7;
+            object-fit: cover;
+        }
+
+        h2 {
+            color: #a855f7;
+            font-size: 32px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .about p {
+            text-align: center;
+            color: #ccc;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .skills-container,
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: #17172b;
+            padding: 25px;
+            border-radius: 15px;
+            width: 250px;
+            text-align: center;
+            border: 1px solid #33334d;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #a855f7;
+        }
+
+        .card h3 {
+            color: #a855f7;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 15px;
+            color: #ccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111122;
+            color: #aaa;
+        }
+
+        @media(max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 7px;
+                font-size: 13px;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .home h1 {
+                font-size: 32px;
+            }
+
+            .profile {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">MyPortfolio</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <div>
+            <h3>Hello, I'm</h3>
+            <h1>Your <span>Name</span></h1>
+            <h3>I'm a Web Developer</h3>
+
+            <p>
+                Welcome to my personal portfolio website.
+                I love learning new technologies and creating websites.
+            </p>
+
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+
+        <img
+            src="https://placehold.co/400x400/17172b/ffffff?text=Your+Photo"
+            alt="My Profile"
+            class="profile">
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+
+        <p>
+            Hello! My name is Your Name.
+            I am passionate about web development.
+            I enjoy creating beautiful and responsive websites.
+            My goal is to become a professional developer.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+            <div class="card">
+                <h3>HTML</h3>
+                <p>Web page structure</p>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <p>Website design</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Website functionality</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects-container">
+            <div class="card">
+                <h3>Project 01</h3>
+                <p>My first website project.</p>
+            </div>
+
+            <div class="card">
+                <h3>Project 02</h3>
+                <p>My personal portfolio design.</p>
+            </div>
+
+            <div class="card">
+                <h3>Project 03</h3>
+                <p>A modern responsive website.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+
+        <p>Email: yourname@gmail.com</p>
+        <p>Facebook: Your Facebook Link</p>
+        <p>GitHub: Your GitHub Link</p>
+
+        <a href="mailto:yourname@gmail.com" class="btn">
+            Send Email
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
